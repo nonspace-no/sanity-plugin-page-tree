@@ -13,6 +13,7 @@ export type PageMetadata = {
   _updatedAt: string;
   path: string;
   type: string;
+  title: string;
 };
 
 export type RawPageMetadata = {
@@ -23,6 +24,7 @@ export type RawPageMetadata = {
   _updatedAt: string;
   parent?: SanityRef;
   slug?: { current: string };
+  title: string;
 };
 
 export type RawPageMetadataWithPublishedState = RawPageMetadata & {
