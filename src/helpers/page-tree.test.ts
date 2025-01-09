@@ -19,6 +19,7 @@ const rawHomePage: RawPageMetadata = {
   _type: 'homePage',
   _updatedAt: '2023-01-01T00:00:00Z',
   language: 'en',
+  title: 'Test Title',
 };
 
 const rawParentContentPage: RawPageMetadata = {
@@ -28,6 +29,7 @@ const rawParentContentPage: RawPageMetadata = {
   parent: { _ref: 'home', _type: 'reference' },
   slug: { current: 'parent' },
   language: 'en',
+  title: 'Test Title',
 };
 
 const rawChildContentPage: RawPageMetadata = {
@@ -37,6 +39,7 @@ const rawChildContentPage: RawPageMetadata = {
   parent: { _ref: 'parent', _type: 'reference' },
   slug: { current: 'child' },
   language: 'en',
+  title: 'Test Title',
 };
 
 const rawPages: RawPageMetadata[] = [rawHomePage, rawParentContentPage, rawChildContentPage];
@@ -107,6 +110,7 @@ describe('Page tree helpers', () => {
             _updatedAt: '2023-01-01T00:00:00Z',
             language: 'en',
             slug: { current: 'slug' },
+            title: 'Test Title',
           },
           {
             _id: 'missing-slug',
@@ -114,6 +118,7 @@ describe('Page tree helpers', () => {
             _updatedAt: '2023-01-01T00:00:00Z',
             language: 'en',
             parent: { _ref: 'home', _type: 'reference' },
+            title: 'Test Title',
           },
         ]),
       ).toStrictEqual([]);
@@ -127,12 +132,14 @@ describe('Page tree helpers', () => {
             _type: 'homePage',
             _updatedAt: '2023-01-01T00:00:00Z',
             language: 'en',
+            title: 'Test Title',
           },
           {
             _id: 'drafts.home',
             _type: 'homePage',
             _updatedAt: '2023-01-01T00:00:00Z',
             language: 'en',
+            title: 'Test Title',
           },
         ]),
       ).toStrictEqual([
