@@ -5,8 +5,10 @@ import { PageTreeDocumentListOptions } from './types';
 
 export { PageTreeField } from './components/PageTreeField';
 export { PageTreeInput } from './components/PageTreeInput';
+export { SlugField } from './components/SlugField';
 export { definePageType } from './schema/definePageType';
 export type { PageTreeConfig, PageTreeDocumentListOptions } from './types';
+export { slugValidator } from './validators/slug-validator';
 
 /**
  * Creates a custom document list for the page tree.
