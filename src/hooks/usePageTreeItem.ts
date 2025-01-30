@@ -11,7 +11,7 @@ export const usePageTreeItem = (documentId: string, config: PageTreeConfig, pers
     options: { apiVersion: config.apiVersion, perspective },
   });
 
-  const pageTree = useMemo(() => (data ? getAllPageMetadata(config, data) : undefined), [config, data]);
+  const pageTree = useMemo(() => (Array.isArray(data) ? getAllPageMetadata(config, data) : undefined), [config, data]);
 
   return {
     isLoading: loading,
