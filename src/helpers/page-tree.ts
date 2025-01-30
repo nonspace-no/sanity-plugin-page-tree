@@ -25,7 +25,7 @@ export const getAllPageMetadata = (config: PageTreeConfig, pages: RawPageMetadat
     _updatedAt: page._updatedAt,
     path: page.path,
     type: page._type,
-    title: page.title
+    title: page.title,
   }));
 };
 
